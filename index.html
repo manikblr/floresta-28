@@ -6,10 +6,13 @@
   <title>Floresta 28 - Visual Guides</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .visual-section { margin-bottom: 2rem; }
-    .visual-section h2 { text-align: center; margin-bottom: 1rem; }
-    .image-scroll { display: flex; flex-direction: column; gap: 1rem; }
-    .image-scroll img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .visual-section { margin-bottom: 2.5rem; }
+    .visual-section h2 { text-align: center; margin-bottom: 1rem; color: #1a365d; }
+    .image-scroll { display: flex; flex-direction: column; gap: 1.2rem; }
+    .image-scroll img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    .test-plan { background: #f7fafc; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+    .test-plan h3 { color: #2d3748; }
+    .test-plan ul { padding-left: 1.2rem; }
   </style>
 </head>
 <body>
@@ -22,35 +25,48 @@
     <a href="#foundation">Foundation</a>
     <a href="#sewer">Sewer</a>
     <a href="#documents">Documents</a>
+    <a href="#test">Test Plan</a>
   </nav>
 
   <main>
     <section id="foundation" class="visual-section">
       <h2>Foundation Work — Visual Checklist</h2>
       <div class="image-scroll">
-        <img src="images/foundation-1.jpg" alt="Site marking">
-        <img src="images/foundation-2.jpg" alt="Excavation">
-        <img src="images/foundation-3.jpg" alt="PCC">
-        <img src="images/foundation-4.jpg" alt="Reinforcement">
-        <img src="images/foundation-5.jpg" alt="Formwork">
-        <img src="images/foundation-6.jpg" alt="Concreting">
-        <img src="images/foundation-7.jpg" alt="Curing">
-        <img src="images/foundation-8.jpg" alt="Red flags">
-        <img src="images/foundation-9.jpg" alt="Anti-termite">
+        <img src="images/foundation-1.jpg" alt="Site marking and grid layout" loading="lazy">
+        <img src="images/foundation-2.jpg" alt="Excavation depth and width" loading="lazy">
+        <img src="images/foundation-3.jpg" alt="PCC bed preparation" loading="lazy">
+        <img src="images/foundation-4.jpg" alt="Reinforcement placement" loading="lazy">
+        <img src="images/foundation-5.jpg" alt="Formwork and shuttering" loading="lazy">
+        <img src="images/foundation-6.jpg" alt="Concrete pouring" loading="lazy">
+        <img src="images/foundation-7.jpg" alt="Curing process" loading="lazy">
+        <img src="images/foundation-8.jpg" alt="Common red flags" loading="lazy">
+        <img src="images/foundation-9.jpg" alt="Anti-termite treatment" loading="lazy">
       </div>
     </section>
 
     <section id="sewer" class="visual-section">
       <h2>Sewer & Drainage — Visual Checklist</h2>
       <div class="image-scroll">
-        <img src="images/sewer-1.jpg" alt="Floor trap">
-        <img src="images/sewer-2.jpg" alt="Vent pipe">
-        <img src="images/sewer-3.jpg" alt="Slope">
-        <img src="images/sewer-4.jpg" alt="House trap">
-        <img src="images/sewer-5.jpg" alt="Rainwater">
-        <img src="images/sewer-6.jpg" alt="Red flags">
-        <img src="images/sewer-7.jpg" alt="Joints and testing">
+        <img src="images/sewer-1.jpg" alt="Floor trap installation" loading="lazy">
+        <img src="images/sewer-2.jpg" alt="Vent pipe requirements" loading="lazy">
+        <img src="images/sewer-3.jpg" alt="Slope and gradient" loading="lazy">
+        <img src="images/sewer-4.jpg" alt="House trap and inspection" loading="lazy">
+        <img src="images/sewer-5.jpg" alt="Rainwater drainage" loading="lazy">
+        <img src="images/sewer-6.jpg" alt="Common plumbing mistakes" loading="lazy">
+        <img src="images/sewer-7.jpg" alt="Joints testing and finish" loading="lazy">
       </div>
+    </section>
+
+    <section id="test" class="test-plan">
+      <h3>Site Test Plan</h3>
+      <ul>
+        <li>Open on iPhone 13 Safari — confirm smooth vertical scroll</li>
+        <li>All 16 images load and are readable (no broken icons)</li>
+        <li>Page loads in under 3 seconds on 4G</li>
+        <li>Nav links jump to correct sections</li>
+        <li>Documents open in GitHub preview when tapped</li>
+        <li>Images remain sharp enough to read labels on phone</li>
+      </ul>
     </section>
 
     <section id="documents">
