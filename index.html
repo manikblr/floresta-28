@@ -2,97 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Floresta 28 - Visual Guides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Floresta 28 - Site Reference</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .visual-section { margin-bottom: 2.5rem; }
-    .visual-section h2 { text-align: center; margin-bottom: 1rem; color: #1a365d; }
-    .image-scroll { display: flex; flex-direction: column; gap: 1.2rem; }
-    .image-scroll img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
-    .test-plan { background: #f7fafc; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
-    .test-plan h3 { color: #2d3748; }
-    .test-plan ul { padding-left: 1.2rem; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; }
+    .tab { flex: 1; text-align: center; padding: 10px 8px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; font-weight: 600; color: #1e3a5f; cursor: pointer; }
+    .tab.active { background: #1e3a5f; color: white; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .doc-list { display: flex; flex-direction: column; gap: 10px; }
+    .doc-item { display: flex; align-items: center; gap: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; cursor: pointer; }
+    .doc-item:active { transform: scale(0.98); }
+    .doc-icon { width: 42px; height: 42px; border-radius: 8px; background: #1e3a5f; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+    .doc-icon.pdf { background: #dc2626; }
+    .doc-icon.xls { background: #059669; }
+    .doc-icon.zip { background: #7c3aed; }
+    .viewer-overlay { position: fixed; inset: 0; background: #111; z-index: 1000; display: none; flex-direction: column; }
+    .viewer-overlay.open { display: flex; }
+    .viewer-bar { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #1e3a5f; color: white; }
+    .viewer-bar button { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white; padding: 6px 12px; border-radius: 8px; font-weight: 600; }
+    .viewer-bar span { flex: 1; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .viewer-frame { flex: 1; border: none; background: #333; }
+    .add-note { font-size: 0.85rem; color: #6b7280; margin-top: 12px; }
   </style>
 </head>
 <body>
   <header>
     <h1>Floresta 28</h1>
-    <p>Visual Site Guides — Scroll to check</p>
+    <p>Site Reference & Documents</p>
   </header>
 
-  <nav>
-    <a href="#foundation">Foundation</a>
-    <a href="#sewer">Sewer</a>
-    <a href="#documents">Documents</a>
-    <a href="#test">Test Plan</a>
-  </nav>
+  <div class="tabs">
+    <div class="tab active" data-panel="guides">Guides</div>
+    <div class="tab" data-panel="documents">Documents</div>
+  </div>
 
-  <main>
+  <div id="guides" class="panel active">
+    <nav>
+      <a href="#foundation">Foundation</a>
+      <a href="#sewer">Sewer</a>
+    </nav>
     <section id="foundation" class="visual-section">
-      <h2>Foundation Work — Visual Checklist</h2>
+      <h2>Foundation Work</h2>
       <div class="image-scroll">
-        <img src="images/foundation-1.jpg" alt="Site marking and grid layout" loading="lazy">
-        <img src="images/foundation-2.jpg" alt="Excavation depth and width" loading="lazy">
-        <img src="images/foundation-3.jpg" alt="PCC bed preparation" loading="lazy">
-        <img src="images/foundation-4.jpg" alt="Reinforcement placement" loading="lazy">
-        <img src="images/foundation-5.jpg" alt="Formwork and shuttering" loading="lazy">
-        <img src="images/foundation-6.jpg" alt="Concrete pouring" loading="lazy">
-        <img src="images/foundation-7.jpg" alt="Curing process" loading="lazy">
-        <img src="images/foundation-8.jpg" alt="Common red flags" loading="lazy">
-        <img src="images/foundation-9.jpg" alt="Anti-termite treatment" loading="lazy">
+        <img src="images/foundation-1.jpg" alt="Site marking" loading="lazy">
+        <img src="images/foundation-2.jpg" alt="Excavation" loading="lazy">
+        <img src="images/foundation-3.jpg" alt="PCC" loading="lazy">
+        <img src="images/foundation-4.jpg" alt="Reinforcement" loading="lazy">
+        <img src="images/foundation-5.jpg" alt="Formwork" loading="lazy">
+        <img src="images/foundation-6.jpg" alt="Concreting" loading="lazy">
+        <img src="images/foundation-7.jpg" alt="Curing" loading="lazy">
+        <img src="images/foundation-8.jpg" alt="Red flags" loading="lazy">
+        <img src="images/foundation-9.jpg" alt="Anti-termite" loading="lazy">
       </div>
     </section>
-
     <section id="sewer" class="visual-section">
-      <h2>Sewer & Drainage — Visual Checklist</h2>
+      <h2>Sewer & Drainage</h2>
       <div class="image-scroll">
-        <img src="images/sewer-1.jpg" alt="Floor trap installation" loading="lazy">
-        <img src="images/sewer-2.jpg" alt="Vent pipe requirements" loading="lazy">
-        <img src="images/sewer-3.jpg" alt="Slope and gradient" loading="lazy">
-        <img src="images/sewer-4.jpg" alt="House trap and inspection" loading="lazy">
-        <img src="images/sewer-5.jpg" alt="Rainwater drainage" loading="lazy">
-        <img src="images/sewer-6.jpg" alt="Common plumbing mistakes" loading="lazy">
-        <img src="images/sewer-7.jpg" alt="Joints testing and finish" loading="lazy">
+        <img src="images/sewer-1.jpg" alt="Floor trap" loading="lazy">
+        <img src="images/sewer-2.jpg" alt="Vent pipe" loading="lazy">
+        <img src="images/sewer-3.jpg" alt="Slope" loading="lazy">
+        <img src="images/sewer-4.jpg" alt="House trap" loading="lazy">
+        <img src="images/sewer-5.jpg" alt="Rainwater" loading="lazy">
+        <img src="images/sewer-6.jpg" alt="Red flags" loading="lazy">
+        <img src="images/sewer-7.jpg" alt="Joints" loading="lazy">
       </div>
     </section>
+  </div>
 
-    <section id="test" class="test-plan">
-      <h3>Site Test Plan</h3>
-      <ul>
-        <li>Open on iPhone 13 Safari — confirm smooth vertical scroll</li>
-        <li>All 16 images load and are readable (no broken icons)</li>
-        <li>Page loads in under 3 seconds on 4G</li>
-        <li>Nav links jump to correct sections</li>
-        <li>Documents open in GitHub preview when tapped</li>
-        <li>Images remain sharp enough to read labels on phone</li>
-      </ul>
+  <div id="documents" class="panel">
+    <section>
+      <h2>All Documents</h2>
+      <p class="add-note">Documents in the repo appear here automatically. PDFs open and render on this page. To add new files, upload them to the <code>docs/</code> folder on GitHub — they will show up after the next deploy.</p>
+      <div id="doc-list" class="doc-list">Loading documents…</div>
+      <a class="add-btn" href="https://github.com/manikblr/floresta-28/upload/main/docs" target="_blank" style="margin-top:14px;">+ Upload New Document</a>
     </section>
+  </div>
 
-    <section id="documents">
-      <h2>Architect Documents</h2>
-      <a class="add-btn" href="https://github.com/manikblr/floresta-28/upload/main/docs" target="_blank">+ Add Document</a>
-      <div class="doc-grid">
-        <a class="doc-card" href="https://github.com/manikblr/floresta-28/blob/main/docs/Plumbing%20BOQ.xlsx" target="_blank">
-          <div class="doc-icon">XLS</div>
-          <div>
-            <div class="doc-name">Plumbing BOQ.xlsx</div>
-            <div class="doc-meta">Excel</div>
-          </div>
-        </a>
-        <a class="doc-card" href="https://github.com/manikblr/floresta-28/blob/main/docs/Electrical%20BOQ.xls" target="_blank">
-          <div class="doc-icon">XLS</div>
-          <div>
-            <div class="doc-name">Electrical BOQ.xls</div>
-            <div class="doc-meta">Excel</div>
-          </div>
-        </a>
-      </div>
-    </section>
-  </main>
+  <div id="viewer" class="viewer-overlay">
+    <div class="viewer-bar">
+      <button onclick="closeViewer()">← Back</button>
+      <span id="viewer-title">Document</span>
+      <button id="viewer-download">Download</button>
+    </div>
+    <iframe id="viewer-frame" class="viewer-frame"></iframe>
+  </div>
 
-  <footer>
-    <p>Floresta 28 · Visual guides · Oct 2026</p>
-  </footer>
+  <footer>Floresta 28 · Site Reference</footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.panel).classList.add('active');
+      });
+    });
+
+    async function loadDocs() {
+      const list = document.getElementById('doc-list');
+      try {
+        const res = await fetch('https://api.github.com/repos/manikblr/floresta-28/contents/docs');
+        const files = await res.json();
+        const docs = files.filter(f => f.type === 'file' && f.name !== 'README.md');
+        if (!docs.length) {
+          list.innerHTML = '<p>No documents yet. Upload files to the docs/ folder.</p>';
+          return;
+        }
+        list.innerHTML = docs.map(f => {
+          const ext = f.name.split('.').pop().toLowerCase();
+          const iconClass = ext === 'pdf' ? 'pdf' : (ext === 'xls' || ext === 'xlsx') ? 'xls' : 'zip';
+          const icon = ext.toUpperCase().slice(0, 3);
+          return `<div class="doc-item" onclick="openDoc('${f.name}', '${f.download_url}', '${ext}')">
+            <div class="doc-icon ${iconClass}">${icon}</div>
+            <div>
+              <div class="doc-name">${f.name}</div>
+              <div class="doc-meta">${(f.size/1024).toFixed(0)} KB · ${ext.toUpperCase()}</div>
+            </div>
+          </div>`;
+        }).join('');
+      } catch (e) {
+        list.innerHTML = '<p>Could not load document list. Check connection.</p>';
+      }
+    }
+
+    function openDoc(name, url, ext) {
+      if (ext === 'pdf') {
+        // Prefer Netlify-served path so it renders on this domain
+        const localUrl = '/docs/' + encodeURIComponent(name);
+        document.getElementById('viewer-title').textContent = name;
+        document.getElementById('viewer-frame').src = localUrl;
+        document.getElementById('viewer-download').onclick = () => window.open(localUrl, '_blank');
+        document.getElementById('viewer').classList.add('open');
+      } else {
+        // For non-PDF, open the file (download or browser preview)
+        window.open(url, '_blank');
+      }
+    }
+
+    function closeViewer() {
+      document.getElementById('viewer').classList.remove('open');
+      document.getElementById('viewer-frame').src = '';
+    }
+
+    loadDocs();
+  </script>
 </body>
 </html>
