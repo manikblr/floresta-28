@@ -6,40 +6,49 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #f9f9f9;
-  padding: 1rem;
-  max-width: 800px;
+  line-height: 1.5;
+  color: #1a202c;
+  background: #f7fafc;
+  padding: 0.75rem;
+  max-width: 640px;
   margin: 0 auto;
 }
 
 header {
   background: #1a365d;
   color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
 
 nav a {
   background: #2b6cb0;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.8rem;
   text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -48,17 +57,18 @@ nav a:hover {
 
 section {
   background: white;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 h2 {
   color: #1a365d;
-  margin-bottom: 0.8rem;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.4rem;
 }
 
 .checklist {
@@ -66,8 +76,9 @@ h2 {
 }
 
 .checklist li {
-  padding: 0.4rem 0 0.4rem 1.8rem;
+  padding: 0.35rem 0 0.35rem 1.6rem;
   position: relative;
+  font-size: 0.95rem;
 }
 
 .checklist li:before {
@@ -75,35 +86,106 @@ h2 {
   position: absolute;
   left: 0;
   color: #2b6cb0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 ol {
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
 }
 
 ol li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 textarea {
   width: 100%;
-  height: 120px;
-  padding: 0.5rem;
+  height: 100px;
+  padding: 0.6rem;
   border: 1px solid #cbd5e0;
-  border-radius: 4px;
+  border-radius: 8px;
   font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.add-btn {
+  display: inline-block;
+  background: #38a169;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.add-btn:hover {
+  background: #2f855a;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.doc-card:hover {
+  background: #edf2f7;
+}
+
+.doc-icon {
+  background: #2b6cb0;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.doc-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.doc-meta {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.75rem;
 }
 
 footer {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #718096;
-  margin-top: 2rem;
+  margin: 1.5rem 0 1rem;
 }
 
-@media (max-width: 600px) {
-  body { padding: 0.5rem; }
-  header h1 { font-size: 1.4rem; }
-  nav { justify-content: center; }
+@media (min-width: 480px) {
+  .doc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
